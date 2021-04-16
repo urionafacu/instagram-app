@@ -1,10 +1,11 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import { Text } from 'atoms';
 
 export default function Main() {
   return (
     <View style={styles.container}>
-      <Text>Home</Text>
+      <Text style={styles.text}>Home</Text>
     </View>
   );
 };
@@ -16,5 +17,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  text: {
+    fontSize: 24,
+  }
 })
 

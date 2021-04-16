@@ -1,7 +1,5 @@
-import { Palette, FullTheme } from 'react-native-elements';
+import { Palette } from 'react-native-elements';
 import tokens from './tokens';
-
-type Theme<T = {}> = Partial<FullTheme> & T;
 
 export const palette: Palette = {
   common: {
@@ -11,7 +9,7 @@ export const palette: Palette = {
   },
 };
 
-const theme: Theme = {
+const theme = {
   palette,
 };
 
