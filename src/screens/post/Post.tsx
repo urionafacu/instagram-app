@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Center } from 'layouts';
 import { Text } from 'atoms';
-import stylesTheme from './home.jss';
+import stylesTheme from './post.jss';
 import { useTheme } from 'hooks';
 
-export default function Main() {
+const Post: FC = () => {
   const { theme } = useTheme();
   const styles = stylesTheme(theme);
   return (
     <Center white>
-      <Text style={styles.text}>Home</Text>
+      <Text style={styles.text}>Post</Text>
     </Center>
   );
 };
 
+export default Post;

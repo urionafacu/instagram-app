@@ -7,9 +7,11 @@ const Stack = createStackNavigator();
 export default function SearchStack() {
   const { Navigator, Screen } = Stack;
   return (
-    <Navigator>
+    <Navigator
+      headerMode='none'
+    >
       <Screen
-        name='Main'
+        name='Search'
         component={Main}
       />
     </Navigator>

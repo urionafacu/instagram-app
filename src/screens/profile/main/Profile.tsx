@@ -1,20 +1,15 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Center } from 'layouts';
+import { Text } from 'atoms';
+import stylesTheme from './profile.jss';
+import { useTheme } from 'hooks';
 
 export default function Main() {
+  const { theme } = useTheme();
+  const styles = stylesTheme(theme);
   return (
-    <View style={styles.container}>
-      <Text>Profile</Text>
-    </View>
+    <Center white>
+      <Text style={styles.text}>Profile</Text>
+    </Center>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-})
-

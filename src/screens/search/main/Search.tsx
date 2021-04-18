@@ -1,20 +1,15 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text } from 'atoms';
+import { useTheme } from 'hooks';
+import stylesTheme from './search.jss';
+import { Center } from 'layouts';
 
 export default function Main() {
+  const { theme } = useTheme();
+  const styles = stylesTheme(theme);
   return (
-    <View style={styles.container}>
-      <Text>Search</Text>
-    </View>
+    <Center white>
+      <Text style={styles.text}>Search</Text>
+    </Center>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-})
-

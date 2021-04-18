@@ -7,9 +7,11 @@ const Stack = createStackNavigator();
 export default function ProfileStack() {
   const { Navigator, Screen } = Stack;
   return (
-    <Navigator>
+    <Navigator
+      headerMode='none'
+    >
       <Screen
-        name='Main'
+        name='Profile'
         component={Main}
       />
     </Navigator>
